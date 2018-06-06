@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		FE70128D20C6127200115C33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE70128C20C6127200115C33 /* AppDelegate.swift */; };
-		FE70128F20C6127200115C33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE70128E20C6127200115C33 /* ViewController.swift */; };
 		FE70129220C6127200115C33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE70129020C6127200115C33 /* Main.storyboard */; };
 		FE70129420C6127400115C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE70129320C6127400115C33 /* Assets.xcassets */; };
 		FE70129720C6127400115C33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE70129520C6127400115C33 /* LaunchScreen.storyboard */; };
 		FE7012A220C6127400115C33 /* HelloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7012A120C6127400115C33 /* HelloTests.swift */; };
 		FE7012AD20C6127400115C33 /* HelloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7012AC20C6127400115C33 /* HelloUITests.swift */; };
+		FE7012BD20C8A10D00115C33 /* HelloWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7012BC20C8A10D00115C33 /* HelloWorldViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		FE70128920C6127200115C33 /* Hello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hello.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE70128C20C6127200115C33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE70128E20C6127200115C33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE70129120C6127200115C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE70129320C6127400115C33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE70129620C6127400115C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		FE7012A820C6127400115C33 /* HelloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE7012AC20C6127400115C33 /* HelloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloUITests.swift; sourceTree = "<group>"; };
 		FE7012AE20C6127400115C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE7012BC20C8A10D00115C33 /* HelloWorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +98,11 @@
 			isa = PBXGroup;
 			children = (
 				FE70128C20C6127200115C33 /* AppDelegate.swift */,
-				FE70128E20C6127200115C33 /* ViewController.swift */,
 				FE70129020C6127200115C33 /* Main.storyboard */,
 				FE70129320C6127400115C33 /* Assets.xcassets */,
 				FE70129520C6127400115C33 /* LaunchScreen.storyboard */,
 				FE70129820C6127400115C33 /* Info.plist */,
+				FE7012BC20C8A10D00115C33 /* HelloWorldViewController.swift */,
 			);
 			path = Hello;
 			sourceTree = "<group>";
@@ -256,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE70128F20C6127200115C33 /* ViewController.swift in Sources */,
+				FE7012BD20C8A10D00115C33 /* HelloWorldViewController.swift in Sources */,
 				FE70128D20C6127200115C33 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,15 +430,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SCGM66G6VH;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Hello/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Ethan-Schutzenhofer.Hello";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hello-world.demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,15 +450,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SCGM66G6VH;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Hello/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Ethan-Schutzenhofer.Hello";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hello-world.demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
